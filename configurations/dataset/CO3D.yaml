@@ -1,0 +1,6 @@
+name: "CO3D"
+lindisp: false
+viz_type: "interpolation"
+dist_loss_weight: 0.00
+depth_smooth_loss_weight: 0.00
+lpips_loss_weight: 0

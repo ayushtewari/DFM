@@ -1,0 +1,55 @@
+defaults:
+  - wandb: local
+  - dataset: celeba
+max_scenes: null
+use_first_pool: false
+
+lr: 2e-5
+
+checkpoint_path: null
+name: null
+batch_size: 12
+num_target: 2
+wandb_every: 500
+
+ctxt_min: 100
+ctxt_max: 180
+
+num_context: 2
+
+mode: "cond"
+model_type: "dit"
+feats_cond: false
+
+sampling_type: "simple"
+setting_name: "coarse_larger_batch"
+ngpus: 2
+
+stage: train
+
+resume_id: null
+wandb_id: null
+
+use_guidance: false
+guidance_scale: 1.0
+temperature: 1.0
+sampling_steps: 50
+
+ema_decay: 0.995
+deterministic: False
+
+image_size: 64
+
+start_idx: 0
+end_idx: 50
+
+use_abs_pose: False
+test_autoregressive_stepsize: 40
+scale_aug_ratio: 0
+all_class: False 
+seed: 0
+use_dataset_pose: False
+noise: 0.0
+eval_10_frame: False  
+rebuttal_indices: False 
+load_pn: False

@@ -1,0 +1,11 @@
+name: "realestate10k"
+overfit_to_index: null
+lindisp: false
+viz_type: "interpolation"
+#viz_type: "spherical"
+dist_loss_weight: 0.005
+#depth_smooth_loss_weight: 0.001
+depth_smooth_loss_weight: 0.002
+lpips_loss_weight: 1.0
+#lpips_loss_weight: 1.5
+rgb_loss_weight: 1.

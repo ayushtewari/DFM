@@ -1,0 +1,8 @@
+name: "CO3DPN"
+root: "/home/gridsan/tyin/Datasets/co3d"
+lindisp: false
+viz_type: "interpolation"
+dist_loss_weight: 0.5
+depth_smooth_loss_weight: 0
+lpips_loss_weight: 0
+scene_scale_path: "./dataset_cache/scale_dict.pt"
