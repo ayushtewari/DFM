@@ -1,4 +1,6 @@
-# Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision [[website](https://diffusion-with-forward-models.github.io)]
+# Diffusion with Forward Models: Solving Stochastic Inverse Problems Without Direct Supervision 
+
+[Project Page](https://diffusion-with-forward-models.github.io) | [Paper](https://arxiv.org/abs/2306.11719)
 
 ![](images/teaser.gif)
 
