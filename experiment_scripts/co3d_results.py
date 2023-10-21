@@ -412,7 +412,7 @@ def train(cfg: DictConfig):
                 for j in range(1):
                     print(f"Starting sample {j}")
                     out = trainer.ema.ema_model.sample(batch_size=1, inp=inp)
-                    frames, depth_frames, conditioning_depth_img, depth_videos = prepare_video_out(out)
+                    frames, depth_frames, conditioning_depth_img, depth_videos = prepare_video_out(out, resolution=dataset.image_size)
 
                     frames = [frame[0] for frame in frames]
 
