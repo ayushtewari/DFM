@@ -1111,7 +1111,7 @@ class Trainer(object):
 
         if self.accelerator.is_main_process:
             data["ema"].pop("model.enc.pos_embed")
-            self.ema.load_state_dict(data["ema"], strict=True)
+            print(self.ema.load_state_dict(data["ema"], strict=False))
 
         if "version" in data:
             print(f"loading from version {data['version']}")
