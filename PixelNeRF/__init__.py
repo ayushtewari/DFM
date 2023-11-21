@@ -1,1 +1,2 @@
 from PixelNeRF.pixelnerf_model_cond import PixelNeRFModelCond
+from PixelNeRF.pixelnerf_model import PixelNeRFModelVanilla
