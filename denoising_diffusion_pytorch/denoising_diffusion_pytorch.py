@@ -1110,7 +1110,8 @@ class Trainer(object):
             print("step optimizer not found")
 
         if self.accelerator.is_main_process:
-            data["ema"].pop("model.enc.pos_embed")
+            data["ema"].pop("ema_model.model.enc.pos_embed")
+            data["ema"].pop("online_model.model.enc.pos_embed")
             print(self.ema.load_state_dict(data["ema"], strict=False))
 
         if "version" in data:
