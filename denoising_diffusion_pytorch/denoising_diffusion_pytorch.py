@@ -1100,7 +1100,8 @@ class Trainer(object):
         model = self.model
         # print(f"model parameter names: {list(model.state_dict().keys())}")
         # load all parameteres
-        model.load_state_dict(data["model"], strict=True)
+        data["model"].pop("model.enc.pos_embed")
+        print(model.load_state_dict(data["model"], strict=False))
 
         try:
             self.step = data["step"]
@@ -1109,6 +1110,7 @@ class Trainer(object):
             print("step optimizer not found")
 
         if self.accelerator.is_main_process:
+            data["ema"].pop("model.enc.pos_embed")
             self.ema.load_state_dict(data["ema"], strict=True)
 
         if "version" in data:
@@ -1193,6 +1195,8 @@ class Trainer(object):
                 torch.zeros((new_feat_dim-old_feat_dim), device=device)
             ], dim=0
         )
+        new_state_dict.pop("model.enc.pos_embed")
+
         print(model.load_state_dict(new_state_dict, strict=False))
 
     def load_from_external_checkpoint(self, path):
